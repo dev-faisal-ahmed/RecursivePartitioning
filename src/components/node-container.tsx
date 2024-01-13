@@ -24,33 +24,24 @@ export function NodeContainer({ children, color, id, alignment }: NodeType) {
       className='flex h-full w-full items-center justify-center gap-2'
     >
       {!children || children.length === 0 ? (
-        <div className='w-fit p-3'>
-          <div className='flex items-center gap-1'>
-            <button
-              onClick={() => handleAddNode('vertical')}
-              className={buttonClassName}
-            >
-              V
-            </button>
-            <button
-              onClick={() => handleAddNode('horizontal')}
-              className={buttonClassName}
-            >
-              H
-            </button>
-            {state.totalNodes !== 1 && (
-              <button onClick={handleDelete} className={buttonClassName}>
-                -
-              </button>
-            )}
-          </div>
-          <p
-            className={
-              'mx-auto mt-2 w-full rounded bg-green-600 py-1 text-center font-semibold text-white '
-            }
+        <div className='flex items-center gap-1 p-1'>
+          <button
+            onClick={() => handleAddNode('vertical')}
+            className={buttonClassName}
           >
-            {id}
-          </p>
+            V
+          </button>
+          <button
+            onClick={() => handleAddNode('horizontal')}
+            className={buttonClassName}
+          >
+            H
+          </button>
+          {state.totalNodes !== 1 && (
+            <button onClick={handleDelete} className={buttonClassName}>
+              -
+            </button>
+          )}
         </div>
       ) : (
         <>
