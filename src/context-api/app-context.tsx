@@ -1,24 +1,28 @@
 import { Dispatch, createContext, useReducer } from "react";
-import { NodeType, WrapperType } from "../utils/types";
+import { AlignmentType, NodeType, WrapperType } from "../utils/types";
+import { addNode, generateColor } from "../utils/helper";
 
 type AppStateType = {
-  lastId: number;
-  nodes: NodeType;
-  colors: string[];
+  node: NodeType;
+  totalNodes: number;
 };
 
 const initialState: AppStateType = {
-  lastId: 0,
-  nodes: { id: 0, color: "", children: [] },
-  colors: ["#faebd7"],
+  node: { id: 1, color: "#faebd7", children: [], alignment: "horizontal" },
+  totalNodes: 1,
 };
 
-type actionType = { type: "ADD_NODE" };
+type actionType = { type: "ADD_NODE"; payload: { id: number; alignment: AlignmentType } };
 
 function appReducer(state: AppStateType, action: actionType) {
   switch (action.type) {
-    case "ADD_NODE":
-      return { ...state };
+    case "ADD_NODE": {
+      const { id, alignment } = action.payload;
+      const { node, totalNodes } = state;
+      const color = generateColor();
+      const newNode = addNode({ node, id, alignment, color, totalNodes });
+      return { ...state, node: newNode, totalNodes: totalNodes + 2 };
+    }
   }
 }
 
