@@ -24,7 +24,7 @@ export function NodeContainer({ children, color, id, alignment }: NodeType) {
       className='flex h-full w-full items-center justify-center gap-2'
     >
       {!children || children.length === 0 ? (
-        <div className='w-fit'>
+        <div className='w-fit p-3'>
           <div className='flex items-center gap-1'>
             <button
               onClick={() => handleAddNode('vertical')}

@@ -59,6 +59,8 @@ export function deleteNode(node: NodeType, id: number) {
         node.alignment = oppositeNode.alignment;
         node.children = oppositeNode.children;
         node.color = oppositeNode.color;
+      } else {
+        deleteNode(currentNode, id);
       }
     }
     return node;
