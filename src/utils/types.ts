@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-export type AlignmentType = "vertical" | "horizontal";
+export type AlignmentType = 'vertical' | 'horizontal';
 
 export type NodeType = {
   id: number;
