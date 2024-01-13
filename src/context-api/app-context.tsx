@@ -36,7 +36,7 @@ function appReducer(state: AppStateType, action: actionType) {
       const { id } = action.payload;
       const { node, totalNodes } = state;
       const updatedNode = deleteNode(node, id);
-      return { ...state, node: updatedNode, totalNodes: totalNodes - 1 };
+      return { ...state, node: updatedNode, totalNodes: totalNodes - 2 };
     }
   }
 }
