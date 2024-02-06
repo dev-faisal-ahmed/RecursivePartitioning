@@ -1,27 +1,19 @@
-# React + TypeScript + Vite
+## Recursive Partitioner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="justify">
+The application features an interactive and engaging user interface, where users are
+presented with a screen hosting two buttons. These buttons empower users to dynamically
+split the container either vertically or horizontally, with the flexibility to continue the process
+infinitely. The user experience is further enriched by the option to minimize containers at any
+point with the touch of a button. Additionally, the application generates a unique color for
+each container, adding a visually appealing and dynamic aspect to the user interface.
+</p>
 
-Currently, two official plugins are available:
+### Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Interactive and engaging user interface
+- Two buttons for dynamic splitting of containers (vertical or horizontal)
+- Flexibility to continue the splitting process infinitely
+- Option to minimize containers with a single button press
+- Unique color generation for each container
+- Visually appealing and dynamic user interface
